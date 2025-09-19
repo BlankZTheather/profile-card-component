@@ -10,11 +10,11 @@
   border-inline: $size solid $color;
 }
 @mixin border-radius($top:null,$bottom:null) {
-  @if ($top != null) {
+  @if ($top) {
     border-start-start-radius: $top;
     border-start-end-radius: $top;
   }
-  @if ($bottom != null) {
+  @if ($bottom) {
     border-end-start-radius: $bottom;
     border-end-end-radius: $bottom;
   }

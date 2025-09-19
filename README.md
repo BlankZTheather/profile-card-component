@@ -25,5 +25,5 @@ This is my solution to the Profile Card component challenge.
 
 ### Links
 
-- [My Submission]()
-- [Live Site]()
+- [My Submission](https://www.frontendmentor.io/solutions/profile-card-component-using-bem-and-sassscss-WbOOPJYJ9E)
+- [Live Site](https://blankztheather.github.io/profile-card-component/)
