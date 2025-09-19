@@ -1,0 +1,21 @@
+@use 'variables' as v;
+@use 'sass:map';
+@use 'sass:list';
+// Functions
+@function get-pattern($name) {
+  @return map.get(v.$imgPat,$name);
+}
+@function get-color($name) {
+  @return map.get(v.$colors, $name);
+}
+
+@function get-base-font() {
+  @return v.$baseFontSize;
+}
+
+@function get-font($name,$key:0) {
+  @if ($key == 0) {
+    @return map.get(v.$font, $name);
+  }
+  @return list.nth(map.get(v.$font, $name), $key);
+}

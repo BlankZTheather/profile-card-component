@@ -1,0 +1,21 @@
+$desktop: "(min-width: 35rem)";
+$colors: (
+        "blue600": hsl(185, 75%, 39%),
+        "navy950": hsl(229, 23%, 23%),
+        "gray500": hsl(227, 10%, 46%),
+        "gray100": hsl(225, 10%, 92%)
+);
+$baseFontSize: 18px;
+$font: ("name": "Kumbh Sans",
+        "weights": 400 700,
+        "url": "../fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf"
+);
+$_imgURL: "../images/bg-pattern-";
+$imgPat: (
+        "bottom": "#{$_imgURL}bottom.svg",
+        "card": "#{$_imgURL}card.svg",
+        "top": "#{$_imgURL}top.svg"
+);
+$borderRadius: 12px;
+$imgBorderRadius: 50px;
+$imgBorderSize: 4px;

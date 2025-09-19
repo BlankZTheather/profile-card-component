@@ -1,0 +1,21 @@
+@use 'variables' as v;
+//Mixins
+@mixin media-desktop {
+  @media #{v.$desktop} {
+    @content;
+  }
+}
+@mixin border-all($size,$color) {
+  border-block: $size solid $color;
+  border-inline: $size solid $color;
+}
+@mixin border-radius($top:null,$bottom:null) {
+  @if ($top != null) {
+    border-start-start-radius: $top;
+    border-start-end-radius: $top;
+  }
+  @if ($bottom != null) {
+    border-end-start-radius: $bottom;
+    border-end-end-radius: $bottom;
+  }
+}

@@ -1,0 +1,12 @@
+@use 'functions' as f;
+@use 'variables' as v;
+@use 'mixins' as m;
+//Placeholders
+%card-radius-top {
+  @include m.border-radius(v.$borderRadius);
+}
+
+%bold-color {
+  color: f.get-color('navy950');
+  font-weight: f.get-font('weights', 2);
+}

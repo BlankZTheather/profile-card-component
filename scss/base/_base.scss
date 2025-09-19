@@ -1,0 +1,55 @@
+@use '../abstracts/functions' as f;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../abstracts/placeholders';
+
+body {
+  @include m.media-desktop {
+    background-position: bottom 20vw right 55vw, top 25vw left 50vw;
+  }
+  background-image: url("#{f.get-pattern('top')}"), url("#{f.get-pattern('bottom')}");
+  background-position: bottom 60vw right 50vw, top 100vw left;
+  background-repeat: no-repeat;
+  background-color: f.get-color('blue600');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  @extend %card-radius-top;
+  @include m.border-radius($bottom: v.$borderRadius);
+  background-color: f.get-color('gray100');
+  inline-size: min(100% - 9vw, 24em);
+  box-shadow: 3px 3px 40px f.get-color('blue600');
+}
+
+div {
+  @extend %card-radius-top;
+  background-image: url("#{f.get-pattern('card')}");
+  block-size: clamp(8.5em, 20vw, 10em);
+}
+
+section {
+  position: relative;
+  inset-block-end: 2.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  @include m.border-radius(v.$imgBorderRadius, v.$imgBorderRadius);
+  @include m.border-all(v.$imgBorderSize, f.get-color('gray100'));
+}
+
+footer {
+  border-block-start: 1px solid f.get-color('gray500');
+  display: flex;
+  justify-content: space-evenly;
+}
+
+span {
+  @extend %bold-color;
+}

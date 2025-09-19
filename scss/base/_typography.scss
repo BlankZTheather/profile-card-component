@@ -1,0 +1,20 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/functions' as f;
+
+@font-face {
+  font-family: f.get-font('name');
+  src: url("#{f.get-font('url')}") format('truetype');
+  font-weight: f.get-font('weights', 1) f.get-font('weights', 2);
+}
+
+html {
+  font-family: f.get-font('name'), sans-serif;
+  font-size: f.get-base-font();
+  font-weight: f.get-font('weights', 1);
+  color: f.get-color('gray500');
+}
+
+h1 {
+  @extend %bold-color;
+  font-size: clamp(1.25em, calc(0.85em + 0.9vw), 1.42em);
+}
